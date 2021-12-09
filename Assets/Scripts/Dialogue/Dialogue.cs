@@ -10,6 +10,7 @@ public class Dialogue : ScriptableObject
 [Serializable]
 public class Message
 {
+    public int background;
     public string characterName;
     public string message;
     public string expressions;

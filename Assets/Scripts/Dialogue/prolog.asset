@@ -13,18 +13,73 @@ MonoBehaviour:
   m_Name: prolog
   m_EditorClassIdentifier: 
   messages:
-  - characterName: Tika
-    message: Ada yang bisa dibantu?
-    expressions: smile
-  - characterName: Anak Kecil
-    message: Ini ada pr Matematika, kakak bisa bantu jawab?
+  - background: 0
+    characterName: 
+    message: 'Tika adalah seorang siswi SMA. '
     expressions: 
-  - characterName: Tika
-    message: Wah maaf dek, kakak gak ahli matematika.
+  - background: 0
+    characterName: 
+    message: 'Dia adalah seorang gadis yang baik serta pandai dalam berbagai bidang
+      pelajaran. '
+    expressions: 
+  - background: 0
+    characterName: 
+    message: 'Namun tidak pada bidang matematika. '
+    expressions: 
+  - background: 1
+    characterName: 
+    message: Sejak SD tika sangat membenci matematika
+    expressions: 
+  - background: 1
+    characterName: 
+    message: Nilai matematikanya pun hanya memenuhi standar untuk kelulusan
+    expressions: 
+  - background: 1
+    characterName: 
+    message: 'Tika tidak pernah berfikir bahwa matematika akan sangat berpengaruh
+      pada kehidupanya                     '
+    expressions: 
+  - background: 1
+    characterName: 
+    message: Hingga pada pertemuan hari itu
+    expressions: 
+  - background: 2
+    characterName: Anak Kecil
+    message: Kak Boleh minta tolong
+    expressions: 
+  - background: 2
+    characterName: Tika
+    message: Apa ada yang bisa dibantu dek ?
     expressions: surprised
-  - characterName: Anak Kecil
-    message: Yah gimana dong, besok dikumpulin nih kak. Soalnya susah banget.
-    expressions: 
-  - characterName: Anak Kecil
-    message: Kakak kan udah SMA, pasti bisa jawab soal aku.
-    expressions: 
+  - background: 2
+    characterName: Anak Kecil
+    message: Kakak bisa bantu aku mengerjakan soal matematika gak ?
+    expressions: 'neutral '
+  - background: 2
+    characterName: Tika
+    message: Tapi kakak juga tidak pandai matematika
+    expressions: sad
+  - background: 2
+    characterName: Anak Kecil
+    message: Tapi kak, ini sudah harus dikumpulkan pagi ini
+    expressions: sad
+  - background: 2
+    characterName: 'Tika '
+    message: Baiklah coba kakak lihat
+    expressions: neutral
+  - background: 2
+    characterName: 'Tika '
+    message: hmmmm......
+    expressions: reading
+  - background: 2
+    characterName: 'Tika '
+    message: Bisa dek, jadi cara ngerjain soal ini.....
+    expressions: reading
+  - background: 2
+    characterName: 'Tika '
+    message: 'HAHH...... dimana anak kecil tadi '
+    expressions: surprised
+  - background: 2
+    characterName: 'Tika '
+    message: 'Bukanya tadi ada disini '
+    expressions: surprised
