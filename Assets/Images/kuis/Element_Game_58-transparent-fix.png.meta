@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: 7f1baec3698f03846864e5b3889e4b5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -878353339178831193
+    second: Element_Game_58-transparent-fix_0
+  - first:
+      213: -3543344658425241210
+    second: Element_Game_58-transparent-fix_1
+  - first:
+      213: -622002527592376757
+    second: Element_Game_58-transparent-fix_2
+  - first:
+      213: -1406827771895220281
+    second: Element_Game_58-transparent-fix_3
+  - first:
+      213: 7989413343511103301
+    second: Element_Game_58-transparent-fix_4
+  - first:
+      213: -7451100363714233022
+    second: Element_Game_58-transparent-fix_5
+  - first:
+      213: 686205856112713415
+    second: Element_Game_58-transparent-fix_6
+  - first:
+      213: 7028113798220587296
+    second: Element_Game_58-transparent-fix_7
+  - first:
+      213: 4816106174289448431
+    second: Element_Game_58-transparent-fix_8
+  - first:
+      213: -8195735337609244759
+    second: Element_Game_58-transparent-fix_9
+  - first:
+      213: 1097751784468714337
+    second: Element_Game_58-transparent-fix_10
+  - first:
+      213: 8559843480043314967
+    second: Element_Game_58-transparent-fix_11
+  - first:
+      213: 2328236060777018183
+    second: Element_Game_58-transparent-fix_12
+  - first:
+      213: -3276260758618859314
+    second: Element_Game_58-transparent-fix_13
+  - first:
+      213: -7906996381439242357
+    second: Element_Game_58-transparent-fix_14
+  - first:
+      213: 5522272076930204378
+    second: Element_Game_58-transparent-fix_15
+  - first:
+      213: -5253197628244111898
+    second: Element_Game_58-transparent-fix_16
+  - first:
+      213: -319977670402871160
+    second: Element_Game_58-transparent-fix_17
+  - first:
+      213: 2307336507789135298
+    second: Element_Game_58-transparent-fix_18
+  - first:
+      213: -903406401966348635
+    second: Element_Game_58-transparent-fix_19
+  - first:
+      213: 873985166318874190
+    second: Element_Game_58-transparent-fix_20
+  - first:
+      213: -1871238877752873667
+    second: Element_Game_58-transparent-fix_21
+  - first:
+      213: 7927008703528911660
+    second: Element_Game_58-transparent-fix_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_0
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 5969
+        width: 1737
+        height: 1669
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2b7feaa467fc3f0800000000000000
+      internalID: -878353339178831193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_1
+      rect:
+        serializedVersion: 2
+        x: 2467
+        y: 5844
+        width: 1669
+        height: 1880
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68129cd7ec283dec0800000000000000
+      internalID: -3543344658425241210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_2
+      rect:
+        serializedVersion: 2
+        x: 4204
+        y: 5844
+        width: 1749
+        height: 1629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4616752ff33e57f0800000000000000
+      internalID: -622002527592376757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_3
+      rect:
+        serializedVersion: 2
+        x: 6118
+        y: 5576
+        width: 1846
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7f70c5891f97ce0800000000000000
+      internalID: -1406827771895220281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_4
+      rect:
+        serializedVersion: 2
+        x: 6118
+        y: 6505
+        width: 1846
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547cebf2b1910ee60800000000000000
+      internalID: 7989413343511103301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_5
+      rect:
+        serializedVersion: 2
+        x: 8220
+        y: 5793
+        width: 940
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d770362bf589890800000000000000
+      internalID: -7451100363714233022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_6
+      rect:
+        serializedVersion: 2
+        x: 8853
+        y: 5793
+        width: 2165
+        height: 1594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce14682794e58900800000000000000
+      internalID: 686205856112713415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_7
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 4141
+        width: 2375
+        height: 1515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021a5ff4340e88160800000000000000
+      internalID: 7028113798220587296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_8
+      rect:
+        serializedVersion: 2
+        x: 3692
+        y: 4500
+        width: 415
+        height: 757
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed86177c0f36d240800000000000000
+      internalID: 4816106174289448431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_9
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 4619
+        width: 325
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af4fa02226e24e80800000000000000
+      internalID: -8195735337609244759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_10
+      rect:
+        serializedVersion: 2
+        x: 4626
+        y: 4625
+        width: 353
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1631fcc8e6ffb3f00800000000000000
+      internalID: 1097751784468714337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_11
+      rect:
+        serializedVersion: 2
+        x: 4990
+        y: 4625
+        width: 399
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fdce80b4caac670800000000000000
+      internalID: 8559843480043314967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_12
+      rect:
+        serializedVersion: 2
+        x: 5919
+        y: 4636
+        width: 558
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7437edb9c5e8f4020800000000000000
+      internalID: 2328236060777018183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_13
+      rect:
+        serializedVersion: 2
+        x: 6557
+        y: 4636
+        width: 558
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec898fac2326882d0800000000000000
+      internalID: -3276260758618859314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_14
+      rect:
+        serializedVersion: 2
+        x: 7189
+        y: 4636
+        width: 559
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fc3042fa4b44290800000000000000
+      internalID: -7906996381439242357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_15
+      rect:
+        serializedVersion: 2
+        x: 8238
+        y: 4107
+        width: 2797
+        height: 1600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2cb7a123d03ac40800000000000000
+      internalID: 5522272076930204378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_16
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 2421
+        width: 2375
+        height: 1521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edc599f694e817b0800000000000000
+      internalID: -5253197628244111898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_17
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 609
+        width: 5121
+        height: 3714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880749b01063f8bf0800000000000000
+      internalID: -319977670402871160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_18
+      rect:
+        serializedVersion: 2
+        x: 8386
+        y: 2409
+        width: 1230
+        height: 1333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdcf0c345e450020800000000000000
+      internalID: 2307336507789135298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_19
+      rect:
+        serializedVersion: 2
+        x: 9895
+        y: 2409
+        width: 1225
+        height: 1333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a66bf2f9a47673f0800000000000000
+      internalID: -903406401966348635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_20
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 706
+        width: 2375
+        height: 1515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ea561d0e4012c00800000000000000
+      internalID: 873985166318874190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_21
+      rect:
+        serializedVersion: 2
+        x: 8386
+        y: 854
+        width: 1230
+        height: 1333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3da3a9a7260806e0800000000000000
+      internalID: -1871238877752873667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_58-transparent-fix_22
+      rect:
+        serializedVersion: 2
+        x: 9895
+        y: 854
+        width: 1225
+        height: 1333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c234541ba64620e60800000000000000
+      internalID: 7927008703528911660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
