@@ -48,6 +48,10 @@ MonoBehaviour:
     message: Kak Boleh minta tolong
     expressions: 
   - background: 2
+    characterName: 
+    message: Seorang anak kecil menghampiri Tika
+    expressions: 
+  - background: 2
     characterName: Tika
     message: Apa ada yang bisa dibantu dek ?
     expressions: surprised
@@ -83,3 +87,7 @@ MonoBehaviour:
     characterName: 'Tika '
     message: 'Bukanya tadi ada disini '
     expressions: surprised
+  - background: 3
+    characterName: 
+    message: 
+    expressions: 

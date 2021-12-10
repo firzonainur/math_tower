@@ -275,7 +275,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tika
+  m_Text: Nama Karakter
 --- !u!222 &672843989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -92.000015}
+  m_AnchoredPosition: {x: 0, y: -92}
   m_SizeDelta: {x: -521.198, y: -211.501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091708114
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.87058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.92941177}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -480,6 +480,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2693ef110db84a26e8d74fda738c334f, type: 3}
   - {fileID: 21300000, guid: 3e52bdef41931ea7fad167f7976fd263, type: 3}
   - {fileID: 21300000, guid: beabf9e419532151e994cd7ee46802d4, type: 3}
+  - {fileID: 21300000, guid: 86c2072742670261fb516d60ab3739b6, type: 3}
+  kotakDialog: {fileID: 1091708114}
   background: {fileID: 1840881607}
   characterName: {fileID: 672843988}
   expressions: {fileID: 11138213}
@@ -492,6 +494,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d6c61cb18b05eda9f970f54b63fdb613, type: 3}
   - {fileID: 21300000, guid: 8cbc063ccaae30e709a5805b8d07ac0c, type: 3}
   - {fileID: 21300000, guid: 9a0bf9f2c01c69737935134ad179909c, type: 3}
+  fadeTime: 1
+  isFading: 0
 --- !u!1 &1248497482
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,8 +624,8 @@ Camera:
   m_GameObject: {fileID: 1588764446}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -820,7 +824,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Iya, ada yang bisa kakak bantu?
+  m_Text: Lorem ipsum dolor amet.
 --- !u!222 &1898819399
 CanvasRenderer:
   m_ObjectHideFlags: 0
