@@ -13,6 +13,8 @@ public class DialogReader : MonoBehaviour
     public Text message;
     public Dialogue story;
     public Sprite[] expressionSprites;
+    public AudioSource backSound;
+    public AudioSource soundEffect;
     public float fadeTime;
     public bool isFading = false;
     private int currentIndex = 0;
@@ -29,7 +31,7 @@ public class DialogReader : MonoBehaviour
         else if (id == "") expressions.sprite = null;
     }
 
-    private IEnumerator fadeIn(float fadeTime, string charName, string msg)
+    private IEnumerator fadeIn(float fadeTime, string charName, string msg, AudioClip sndEffect)
     {
         Color tmp = background.color;
         isFading = true;
@@ -54,6 +56,8 @@ public class DialogReader : MonoBehaviour
         if (msg != "") showDialog();
         characterName.text = charName;
         message.text = msg;
+        soundEffect.clip = sndEffect;
+        soundEffect.Play();
     }
 
     private void hideDialog()
@@ -81,13 +85,15 @@ public class DialogReader : MonoBehaviour
             background.color = tmp;
             background.sprite = backgrounds[current.background];
 
-            StartCoroutine(fadeIn(fadeTime, current.characterName, current.message));
+            StartCoroutine(fadeIn(fadeTime, current.characterName, current.message, current.soundEffect));
         }
         else
         {
             background.sprite = backgrounds[current.background];
             characterName.text = current.characterName;
             message.text = current.message;
+            soundEffect.clip = current.soundEffect;
+            soundEffect.Play();
         }
 
         setExpressions(current.expressions);
@@ -96,6 +102,8 @@ public class DialogReader : MonoBehaviour
     void Start()
     {
         maxIndex = story.messages.Length - 1;
+        backSound.clip = story.backsound;
+        backSound.Play();
         readMessage(currentIndex);
     }
 
@@ -108,6 +116,11 @@ public class DialogReader : MonoBehaviour
                 currentIndex += 1;
                 readMessage(currentIndex);
             }
+        }
+
+        if (currentIndex == maxIndex)
+        {
+            backSound.Stop();
         }
     }
 }

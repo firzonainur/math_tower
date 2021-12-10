@@ -12,82 +12,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194551830a745d81488ffc4d3cdcb841, type: 3}
   m_Name: prolog
   m_EditorClassIdentifier: 
+  backsound: {fileID: 8300000, guid: 581eecbbc68230883834e3fa8d73cce7, type: 3}
   messages:
   - background: 0
+    soundEffect: {fileID: 0}
     characterName: 
     message: 'Tika adalah seorang siswi SMA. '
     expressions: 
   - background: 0
+    soundEffect: {fileID: 0}
     characterName: 
     message: 'Dia adalah seorang gadis yang baik serta pandai dalam berbagai bidang
       pelajaran. '
     expressions: 
   - background: 0
+    soundEffect: {fileID: 0}
     characterName: 
     message: 'Namun tidak pada bidang matematika. '
     expressions: 
   - background: 1
+    soundEffect: {fileID: 0}
     characterName: 
     message: Sejak SD tika sangat membenci matematika
     expressions: 
   - background: 1
+    soundEffect: {fileID: 0}
     characterName: 
     message: Nilai matematikanya pun hanya memenuhi standar untuk kelulusan
     expressions: 
   - background: 1
+    soundEffect: {fileID: 0}
     characterName: 
     message: 'Tika tidak pernah berfikir bahwa matematika akan sangat berpengaruh
       pada kehidupanya                     '
     expressions: 
   - background: 1
+    soundEffect: {fileID: 0}
     characterName: 
     message: Hingga pada pertemuan hari itu
     expressions: 
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: Anak Kecil
     message: Kak Boleh minta tolong
     expressions: 
   - background: 2
+    soundEffect: {fileID: 8300000, guid: 2b1da09cd1aba2141b4e8bf1abf4af9d, type: 3}
     characterName: 
     message: Seorang anak kecil menghampiri Tika
     expressions: 
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: Tika
     message: Apa ada yang bisa dibantu dek ?
     expressions: surprised
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: Anak Kecil
     message: Kakak bisa bantu aku mengerjakan soal matematika gak ?
     expressions: 'neutral '
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: Tika
     message: Tapi kakak juga tidak pandai matematika
     expressions: sad
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: Anak Kecil
     message: Tapi kak, ini sudah harus dikumpulkan pagi ini
     expressions: sad
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: 'Tika '
     message: Baiklah coba kakak lihat
     expressions: neutral
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: 'Tika '
     message: hmmmm......
     expressions: reading
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: 'Tika '
     message: Bisa dek, jadi cara ngerjain soal ini.....
     expressions: reading
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: 'Tika '
     message: 'HAHH...... dimana anak kecil tadi '
     expressions: surprised
   - background: 2
+    soundEffect: {fileID: 0}
     characterName: 'Tika '
     message: 'Bukanya tadi ada disini '
     expressions: surprised
   - background: 3
+    soundEffect: {fileID: 0}
     characterName: 
     message: 
     expressions: 
