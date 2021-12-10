@@ -762,6 +762,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9a0bf9f2c01c69737935134ad179909c, type: 3}
   backSound: {fileID: 226734834}
   soundEffect: {fileID: 639544885}
+  nextScene: Level 1
   fadeTime: 1
 --- !u!1 &1248497482
 GameObject:

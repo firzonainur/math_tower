@@ -1,6 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogReader : MonoBehaviour
@@ -15,6 +15,7 @@ public class DialogReader : MonoBehaviour
     public Sprite[] expressionSprites;
     public AudioSource backSound;
     public AudioSource soundEffect;
+    public string nextScene;
     public float fadeTime;
     private int currentIndex = 0;
     private int maxIndex = 0;
@@ -101,6 +102,12 @@ public class DialogReader : MonoBehaviour
         }
     }
 
+    private IEnumerator GoToNextScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(nextScene);
+    }
+
     void Start()
     {
         maxIndex = story.messages.Length - 1;
@@ -122,7 +129,9 @@ public class DialogReader : MonoBehaviour
 
         if (currentIndex == maxIndex)
         {
+            expressions.sprite = null;
             backSound.Stop();
+            StartCoroutine(GoToNextScene());
         }
     }
 }
