@@ -57,7 +57,7 @@ MonoBehaviour:
     message: Kak Boleh minta tolong
     expressions: 
   - background: 2
-    soundEffect: {fileID: 8300000, guid: 2b1da09cd1aba2141b4e8bf1abf4af9d, type: 3}
+    soundEffect: {fileID: 8300000, guid: c53746caba1b0ca49a92298c12e6c98c, type: 3}
     characterName: 
     message: Seorang anak kecil menghampiri Tika
     expressions: 

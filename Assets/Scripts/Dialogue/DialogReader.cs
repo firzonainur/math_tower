@@ -16,9 +16,9 @@ public class DialogReader : MonoBehaviour
     public AudioSource backSound;
     public AudioSource soundEffect;
     public float fadeTime;
-    public bool isFading = false;
     private int currentIndex = 0;
     private int maxIndex = 0;
+    private bool isFading = false;
 
     private void setExpressions(string id)
     {
@@ -31,14 +31,15 @@ public class DialogReader : MonoBehaviour
         else if (id == "") expressions.sprite = null;
     }
 
-    private IEnumerator fadeIn(float fadeTime, string charName, string msg, AudioClip sndEffect)
+    private IEnumerator fadeIn(float fadeTime, int index)
     {
-        Color tmp = background.color;
+        hideDialog();
         isFading = true;
 
-        hideDialog();
-        characterName.text = "";
-        message.text = "";
+        Color tmp = background.color;
+        tmp.a = 0f;
+        background.color = tmp;
+        background.sprite = backgrounds[story.messages[index].background];
 
         while (tmp.a < 1f)
         {
@@ -53,11 +54,20 @@ public class DialogReader : MonoBehaviour
         background.color = tmp;
         isFading = false;
 
-        if (msg != "") showDialog();
-        characterName.text = charName;
-        message.text = msg;
-        soundEffect.clip = sndEffect;
+        if (story.messages[index].message != "") showDialog();
+        fillDialogueUI(story, index);
+    }
+
+    private void fillDialogueUI(Dialogue story, int index)
+    {
+        var current = story.messages[index];
+
+        background.sprite = backgrounds[current.background];
+        characterName.text = current.characterName;
+        message.text = current.message;
+        soundEffect.clip = current.soundEffect;
         soundEffect.Play();
+        setExpressions(current.expressions);
     }
 
     private void hideDialog()
@@ -65,6 +75,9 @@ public class DialogReader : MonoBehaviour
         Color tmp = kotakDialog.color;
         tmp.a = 0f;
         kotakDialog.color = tmp;
+
+        characterName.text = "";
+        message.text = "";
     }
 
     private void showDialog()
@@ -80,23 +93,12 @@ public class DialogReader : MonoBehaviour
 
         if (background.sprite != backgrounds[current.background])
         {
-            Color tmp = background.color;
-            tmp.a = 0f;
-            background.color = tmp;
-            background.sprite = backgrounds[current.background];
-
-            StartCoroutine(fadeIn(fadeTime, current.characterName, current.message, current.soundEffect));
+            StartCoroutine(fadeIn(fadeTime, index));
         }
         else
         {
-            background.sprite = backgrounds[current.background];
-            characterName.text = current.characterName;
-            message.text = current.message;
-            soundEffect.clip = current.soundEffect;
-            soundEffect.Play();
+            fillDialogueUI(story, index);
         }
-
-        setExpressions(current.expressions);
     }
 
     void Start()

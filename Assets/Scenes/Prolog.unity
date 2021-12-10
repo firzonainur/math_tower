@@ -234,7 +234,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -391,7 +391,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 85
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -763,7 +763,6 @@ MonoBehaviour:
   backSound: {fileID: 226734834}
   soundEffect: {fileID: 639544885}
   fadeTime: 1
-  isFading: 0
 --- !u!1 &1248497482
 GameObject:
   m_ObjectHideFlags: 0
