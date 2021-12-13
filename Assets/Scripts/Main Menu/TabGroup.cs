@@ -11,6 +11,7 @@ public class TabGroup : MonoBehaviour
     public Sprite tabActive;
     public TabButton selectedTab;
     public List<GameObject> objectsToSwap;
+    public AudioSource hover;
 
     public void Subscribe (TabButton button)
     {
@@ -27,6 +28,7 @@ public class TabGroup : MonoBehaviour
         if(selectedTab == null || button != selectedTab)
         {
             button.background.sprite = tabHover;
+            hover.Play();
         }
         
     }

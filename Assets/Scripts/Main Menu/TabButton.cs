@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Image))]
 public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
@@ -12,10 +13,12 @@ public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     public Image background;
     public UnityEvent onTabSelected;
     public UnityEvent onTabDeselected;
+    public string nama_scene;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        tabGroup.OnTabSelected(this);
+            tabGroup.OnTabSelected(this);
+            SceneManager.LoadScene(nama_scene);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
