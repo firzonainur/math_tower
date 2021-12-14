@@ -10,6 +10,7 @@ public class player1 : MonoBehaviour
     private float horizontalMove = 0f;
 
     public bool jump = false;
+    public bool onSlope = false;
 
     public float moveSpeed = 10f;
     public float jumpAmount = 10f;
@@ -23,6 +24,7 @@ public class player1 : MonoBehaviour
     public bool onEndingPosition = false;
     public GameObject openingDialog;
     public GameObject endingDialog;
+    public float angleInRadians;
 
     private void ChangeAnimationState(string animation, float speed)
     {
@@ -37,6 +39,7 @@ public class player1 : MonoBehaviour
     private void SetPlayerAnimation()
     {
         if (jump) ChangeAnimationState("Jump", jumpAnimationSpeed);
+
         else
         {
             if (Mathf.Abs(horizontalMove) > 0)
@@ -55,6 +58,14 @@ public class player1 : MonoBehaviour
         if (paused || onQuiz) return;
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        
+        // Prevent jump backward
+        var rotation_y = gameObject.transform.eulerAngles.y;
+        if (jump)
+        {
+            if (rotation_y == 90 && horizontalMove < 0 || rotation_y == 270 && horizontalMove > 0) horizontalMove = 0;
+        }
+
         rigid.velocity = new Vector3(horizontalMove * Time.fixedDeltaTime, rigid.velocity.y, rigid.velocity.z);
     }
 
@@ -71,6 +82,8 @@ public class player1 : MonoBehaviour
         if (paused || onQuiz) return;
 
         rigid.velocity = new Vector3(rigid.velocity.x, jumpAmount * Time.fixedDeltaTime, rigid.velocity.z);
+        onSlope = false;
+        angleInRadians = 0;
     }
 
     private bool OnGround()
@@ -79,7 +92,7 @@ public class player1 : MonoBehaviour
         bool grounded = Physics.Raycast(capsuleCollider.bounds.center, Vector3.down, capsuleCollider.bounds.extents.y + extraHeightText);
         Debug.DrawRay(capsuleCollider.bounds.center, Vector3.down * (capsuleCollider.bounds.extents.y + extraHeightText));
 
-        return grounded;
+        return grounded || onSlope;
     }
 
     private void OpenDialogue(GameObject dialogObject)
@@ -142,5 +155,14 @@ public class player1 : MonoBehaviour
         {
             onEndingPosition = true;
         }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        var normal = other.contacts[0].normal;
+
+        angleInRadians = Mathf.Acos(Mathf.Clamp(normal.y, -1f, 1f));
+
+        if (angleInRadians != 0) onSlope = true;
+        else onSlope = false;
     }
 }
