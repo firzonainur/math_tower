@@ -118,10 +118,10 @@ public class DialogReader : MonoBehaviour
         }
     }
 
-    private IEnumerator GoToNextScene()
+    private void GoToNextScene()
     {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(nextScene);
+        GameObject loadingScreen = GameObject.FindGameObjectWithTag("LoadingScreen").gameObject;
+        loadingScreen.GetComponent<loading>().StartLoading(nextScene);
     }
 
     void Awake()
@@ -152,7 +152,7 @@ public class DialogReader : MonoBehaviour
             rect.sizeDelta = Vector2.zero;
             backSound.Stop();
 
-            if (goToNextSceneAfterEnds && !hideDialogueAfterEnds) StartCoroutine(GoToNextScene());
+            if (goToNextSceneAfterEnds && !hideDialogueAfterEnds) GoToNextScene();
             else if (hideDialogueAfterEnds && !goToNextSceneAfterEnds)
             {
                 kotakDialog.transform.parent.gameObject.SetActive(false);

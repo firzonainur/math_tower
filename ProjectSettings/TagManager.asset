@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - EndingPos
+  - LoadingScreen
   layers:
   - Default
   - TransparentFX
