@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class jawab : MonoBehaviour
 {
-    public GameObject feed_benar, feed_salah;
-    // Start is called before the first frame update
+    private GameObject feed_benar, feed_salah, feedback;
+
     void Start()
     {
+        GameObject parent = transform.parent.gameObject;
+        feedback = parent.transform.Find("feedback").gameObject;
 
+        feed_benar = feedback.transform.Find("benar").gameObject;
+
+        feed_salah = feedback.transform.Find("salah").gameObject;
     }
 
     public void jawaban(bool jawab)
@@ -18,9 +20,8 @@ public class jawab : MonoBehaviour
         {
             feed_benar.SetActive(false);
             feed_benar.SetActive(true);
-            int nilai = PlayerPrefs.GetInt("skor") + 20;
-            PlayerPrefs.SetInt("skor", nilai);
-
+            int nilai = PlayerPrefs.GetInt("nilai") + 20;
+            PlayerPrefs.SetInt("nilai", nilai);
         }
         else
         {

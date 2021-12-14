@@ -104,7 +104,7 @@ MonoBehaviour:
   - background: 2
     soundEffect: {fileID: 0}
     characterName: 'Tika '
-    message: 'Bukanya tadi ada disini '
+    message: 'Bukannya tadi ada disini '
     expressions: surprised
   - background: 3
     soundEffect: {fileID: 0}

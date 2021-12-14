@@ -14,6 +14,6 @@ public class skor_akhir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = PlayerPrefs.GetInt("skor").ToString();
+        GetComponent<Text>().text = PlayerPrefs.GetInt("nilai").ToString();
     }
 }

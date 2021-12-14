@@ -5,31 +5,47 @@ using UnityEngine.UI;
 
 public class DialogReader : MonoBehaviour
 {
+    public GameObject player;
     public Sprite[] backgrounds;
     public Image kotakDialog;
-    public SpriteRenderer background;
+    public Image background;
     public Text characterName;
-    public SpriteRenderer expressions;
+    public Image expressions;
     public Text message;
     public Dialogue story;
     public Sprite[] expressionSprites;
     public AudioSource backSound;
     public AudioSource soundEffect;
-    public string nextScene;
     public float fadeTime;
     private int currentIndex = 0;
     private int maxIndex = 0;
     private bool isFading = false;
+    public bool goToNextSceneAfterEnds = false;
+    public string nextScene;
+    public bool hideDialogueAfterEnds = false;
 
     private void setExpressions(string id)
     {
-        if (id == "neutral") expressions.sprite = expressionSprites[0];
-        else if (id == "reading") expressions.sprite = expressionSprites[1];
-        else if (id == "surprised") expressions.sprite = expressionSprites[2];
-        else if (id == "thinking") expressions.sprite = expressionSprites[3];
-        else if (id == "angry") expressions.sprite = expressionSprites[4];
-        else if (id == "sad") expressions.sprite = expressionSprites[5];
-        else if (id == "") expressions.sprite = null;
+        var rect = expressions.transform as RectTransform;
+
+        if (id == "")
+        {
+            expressions.sprite = null;    
+            rect.sizeDelta = new Vector2(0, 0);
+        }
+        else
+        {   
+            if (id == "neutral") expressions.sprite = expressionSprites[0];
+            else if (id == "reading") expressions.sprite = expressionSprites[1];
+            else if (id == "surprised") expressions.sprite = expressionSprites[2];
+            else if (id == "thinking") expressions.sprite = expressionSprites[3];
+            else if (id == "angry") expressions.sprite = expressionSprites[4];
+            else if (id == "sad") expressions.sprite = expressionSprites[5];
+
+            var width = expressions.sprite.rect.width;
+            var height = expressions.sprite.rect.height;
+            rect.sizeDelta = new Vector2(width / 1.4f, height / 1.4f);
+        }
     }
 
     private IEnumerator fadeIn(float fadeTime, int index)
@@ -108,12 +124,14 @@ public class DialogReader : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
-    void Start()
+    void Awake()
     {
-        maxIndex = story.messages.Length - 1;
+        Time.timeScale = 1;
+        maxIndex = story.messages.Length;
         backSound.clip = story.backsound;
         backSound.Play();
         readMessage(currentIndex);
+        currentIndex = 1;
     }
 
     void Update()
@@ -122,16 +140,27 @@ public class DialogReader : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.Space) && !isFading)
             {
-                currentIndex += 1;
                 readMessage(currentIndex);
+                currentIndex += 1;
             }
         }
 
         if (currentIndex == maxIndex)
         {
             expressions.sprite = null;
+            var rect = expressions.transform as RectTransform;
+            rect.sizeDelta = Vector2.zero;
             backSound.Stop();
-            StartCoroutine(GoToNextScene());
+
+            if (goToNextSceneAfterEnds && !hideDialogueAfterEnds) StartCoroutine(GoToNextScene());
+            else if (hideDialogueAfterEnds && !goToNextSceneAfterEnds)
+            {
+                kotakDialog.transform.parent.gameObject.SetActive(false);
+                if (player != null)
+                {
+                    player.GetComponent<player1>().paused = false;
+                }
+            }
         }
     }
 }

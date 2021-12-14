@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class skor : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Text scoreText;
+
     void Start()
     {
-        PlayerPrefs.SetInt("nilai", 0);
+        scoreText = gameObject.GetComponent<Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = PlayerPrefs.GetInt("skor").ToString();
+        scoreText.text = PlayerPrefs.GetInt("nilai").ToString();
     }
 }

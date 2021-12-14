@@ -16,9 +16,18 @@ public class player1 : MonoBehaviour
     public float animationSpeed = 1;
     public float jumpAnimationSpeed = 1.5f;
 
+    public bool paused = false;
+    public bool onQuiz = false;
+    public bool readOpening = false;
+    public bool readEnding = false;
+    public bool onEndingPosition = false;
+    public GameObject openingDialog;
+    public GameObject endingDialog;
+
     private void ChangeAnimationState(string animation, float speed)
     {
         if (m_currentAnimation == animation) return;
+        if (paused || onQuiz) return;
 
         m_currentAnimation = animation;
         m_animator.Play(m_currentAnimation);
@@ -43,18 +52,24 @@ public class player1 : MonoBehaviour
 
     private void MoveHorizontal()
     {
+        if (paused || onQuiz) return;
+
         horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
         rigid.velocity = new Vector3(horizontalMove * Time.fixedDeltaTime, rigid.velocity.y, rigid.velocity.z);
     }
 
     private void RotatePlayer()
     {
+        if (paused || onQuiz) return;
+
         if (horizontalMove > 0) gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
         else if (horizontalMove < 0) gameObject.transform.eulerAngles = new Vector3(0, -90, 0);
     }
 
     private void Jump()
     {
+        if (paused || onQuiz) return;
+
         rigid.velocity = new Vector3(rigid.velocity.x, jumpAmount * Time.fixedDeltaTime, rigid.velocity.z);
     }
 
@@ -67,12 +82,21 @@ public class player1 : MonoBehaviour
         return grounded;
     }
 
+    private void OpenDialogue(GameObject dialogObject)
+    {
+        paused = true;
+        dialogObject.SetActive(true);
+    }
+
     void Awake()
     {
         m_animator = gameObject.GetComponent<Animator>();
         rigid = gameObject.GetComponent<Rigidbody>();
         rigid.freezeRotation = true;
         capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
+
+        PlayerPrefs.SetInt("TempSkor", 0);
+        PlayerPrefs.SetInt("nilai", 0);
     }
 
     void Update()
@@ -85,11 +109,38 @@ public class player1 : MonoBehaviour
         {
             Jump();
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha0) && !onQuiz)
+        {
+            paused = !paused;
+
+            if (paused) Time.timeScale = 0;
+            else Time.timeScale = 1;
+        }
+
+        if (OnGround() && !readOpening)
+        {
+            OpenDialogue(openingDialog);
+            readOpening = true;
+        }
+
+        if (onEndingPosition && !readEnding)
+        {
+            OpenDialogue(endingDialog);
+            readEnding = false;
+        }
     }
 
     void FixedUpdate()
     {
         if (OnGround()) jump = false;
         else jump = true;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == "EndingPos")
+        {
+            onEndingPosition = true;
+        }
     }
 }
