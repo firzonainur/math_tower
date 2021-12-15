@@ -15,10 +15,24 @@ public class bukaKuis : MonoBehaviour
 
     private IEnumerator removeRockObject(float removeSpeed)
     {
-        while (puzzleRock.transform.position.y > rockDestinationY)
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        canOpenQuiz = false;
+
+        if (puzzleRock.transform.position.y > rockDestinationY)
         {
-            puzzleRock.transform.position += Vector3.down * removeSpeed;
-            yield return null;
+            while (puzzleRock.transform.position.y > rockDestinationY)
+            {
+                puzzleRock.transform.position += Vector3.down * removeSpeed;
+                yield return null;
+            }
+        }
+        else if (puzzleRock.transform.position.y < rockDestinationY)
+        {
+            while (puzzleRock.transform.position.y < rockDestinationY)
+            {
+                puzzleRock.transform.position += Vector3.up * removeSpeed;
+                yield return null;
+            }
         }
 
         Destroy(gameObject);
