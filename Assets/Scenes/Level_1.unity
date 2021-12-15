@@ -432,7 +432,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.56, y: 7.35, z: 6.83}
+  m_Size: {x: 3.56, y: 7.35, z: 9.17}
   m_Center: {x: 0, y: 2.69, z: 0}
 --- !u!4 &245113965
 Transform:
@@ -1755,7 +1755,7 @@ MonoBehaviour:
   soundEffect: {fileID: 412516473}
   fadeTime: 1
   goToNextSceneAfterEnds: 1
-  nextScene: main_menu
+  nextScene: Level_2
   hideDialogueAfterEnds: 0
 --- !u!114 &1163317205
 MonoBehaviour:

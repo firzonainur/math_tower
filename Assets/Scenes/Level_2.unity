@@ -672,7 +672,7 @@ MonoBehaviour:
   soundEffect: {fileID: 989443799}
   fadeTime: 1
   goToNextSceneAfterEnds: 1
-  nextScene: main_menu
+  nextScene: Level 3
   hideDialogueAfterEnds: 0
 --- !u!114 &454130243
 MonoBehaviour:
@@ -2573,15 +2573,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 233.10191
+      value: 238.84573
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.9479704
+      value: -7.2783685
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.564154
+      value: 18.34996
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalRotation.w

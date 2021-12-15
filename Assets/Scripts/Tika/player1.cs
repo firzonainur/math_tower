@@ -107,7 +107,10 @@ public class player1 : MonoBehaviour
         rigid = gameObject.GetComponent<Rigidbody>();
         rigid.freezeRotation = true;
         capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
-
+    }
+    
+    private void Start()
+    {
         PlayerPrefs.SetInt("TempSkor", 0);
         PlayerPrefs.SetInt("nilai", 0);
     }

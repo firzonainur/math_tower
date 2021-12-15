@@ -1044,7 +1044,7 @@ MonoBehaviour:
   soundEffect: {fileID: 1694782909}
   fadeTime: 1
   goToNextSceneAfterEnds: 1
-  nextScene: Level 1
+  nextScene: Level_1
   hideDialogueAfterEnds: 0
 --- !u!114 &1955845876
 MonoBehaviour:
