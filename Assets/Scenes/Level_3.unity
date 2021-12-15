@@ -805,7 +805,7 @@ MonoBehaviour:
   soundEffect: {fileID: 989443799}
   fadeTime: 1
   goToNextSceneAfterEnds: 1
-  nextScene: Level 3
+  nextScene: Level_4
   hideDialogueAfterEnds: 0
 --- !u!114 &454130243
 MonoBehaviour:
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b73523260d2a536ab8ec906e8107aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumY: 5
+  minimumY: -999
 --- !u!1 &509719989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8859743238269923776, guid: ceef262b35f380947977442f4e8ea561, type: 3}

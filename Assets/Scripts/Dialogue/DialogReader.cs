@@ -162,6 +162,7 @@ public class DialogReader : MonoBehaviour
 
             if (goToNextSceneAfterEnds && !hideDialogueAfterEnds)
             {
+                player.GetComponent<player1>().paused = true;
                 GoToNextScene();
             }
             else if (hideDialogueAfterEnds && !goToNextSceneAfterEnds)

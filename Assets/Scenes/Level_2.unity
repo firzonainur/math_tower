@@ -158,6 +158,7 @@ MonoBehaviour:
   puzzleRock: {fileID: 1236420232}
   rockDestinationY: 7.26
   removeSpeed: 0.5
+  canOpenQuiz: 0
 --- !u!65 &26225764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -672,7 +673,7 @@ MonoBehaviour:
   soundEffect: {fileID: 989443799}
   fadeTime: 1
   goToNextSceneAfterEnds: 1
-  nextScene: Level 3
+  nextScene: Level_3
   hideDialogueAfterEnds: 0
 --- !u!114 &454130243
 MonoBehaviour:
@@ -1529,6 +1530,7 @@ MonoBehaviour:
   puzzleRock: {fileID: 79661099}
   rockDestinationY: 9.49
   removeSpeed: 0.5
+  canOpenQuiz: 0
 --- !u!65 &728971906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2573,31 +2575,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 238.84573
+      value: 414.39868
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.2783685
+      value: -21.036957
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.34996
+      value: 23.532871
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8687345
+      value: -0.9751403
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.49280074
+      value: 0.21550201
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0430346
+      value: 0.05036395
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029178, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.02441037
+      value: 0.011130289
       objectReference: {fileID: 0}
     - target: {fileID: 7330232003502029179, guid: 6f5049c81a1f3c243b6850ad8691107c, type: 3}
       propertyPath: m_TargetTexture
