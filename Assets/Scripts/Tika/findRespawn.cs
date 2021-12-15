@@ -47,4 +47,13 @@ public class findRespawn : MonoBehaviour
             StartCoroutine(find());
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "lavaOrWater")
+        {
+            findClosest = true;
+            StartCoroutine(find());
+        }
+    }
 }
