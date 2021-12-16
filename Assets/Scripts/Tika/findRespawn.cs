@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class findRespawn : MonoBehaviour
 {
@@ -11,6 +12,16 @@ public class findRespawn : MonoBehaviour
 
     IEnumerator find()
     {
+        PlayerPrefs.SetInt("Nama_HP", PlayerPrefs.GetInt("Nama_HP") - 30);
+        Debug.Log("HP: " + PlayerPrefs.GetInt("Nama_HP"));
+
+        if (PlayerPrefs.GetInt("Nama_HP") < 0)
+        {
+            Debug.Log("Game over");
+            PlayerPrefs.SetString("Nama_Level", "Level_1");
+            SceneManager.LoadScene("main_menu");
+        }
+
         foreach(GameObject g in GameObject.FindGameObjectsWithTag("Respawn"))
         {
             float dist = Vector3.Distance(this.gameObject.transform.position, g.transform.position);
