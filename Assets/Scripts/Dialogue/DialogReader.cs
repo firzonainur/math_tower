@@ -120,13 +120,13 @@ public class DialogReader : MonoBehaviour
 
     private void GoToNextScene()
     {
-        PlayerPrefs.SetInt("Nama_Skor", PlayerPrefs.GetInt("Nama_Skor") + PlayerPrefs.GetInt("TempSkor"));
-        PlayerPrefs.SetString("Nama_Level", nextScene);
+        PlayerPrefs.SetInt("Skor", PlayerPrefs.GetInt("Skor") + PlayerPrefs.GetInt("TempSkor"));
+        PlayerPrefs.SetString("Level", nextScene);
 
         PlayerPrefs.SetInt("TempSkor", 0);
 
-        Debug.Log("Skor terbaru: " + PlayerPrefs.GetInt("Nama_Skor"));
-        Debug.Log("Level selanjutnya: " + PlayerPrefs.GetString("Nama_Level"));
+        Debug.Log("Skor terbaru: " + PlayerPrefs.GetInt("Skor"));
+        Debug.Log("Level selanjutnya: " + PlayerPrefs.GetString("Level"));
 
         GameObject loadingScreen = GameObject.FindGameObjectWithTag("LoadingScreen").gameObject;
         loadingScreen.GetComponent<loading>().StartLoading(nextScene);

@@ -11,12 +11,8 @@ public class loading : MonoBehaviour
 
     public IEnumerator LoadingScene(string sceneToLoad)
     {  
-        AsyncOperation loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad);
-
-        while (!loadingOperation.isDone)
-        {
-            yield return null;
-        }
+        SceneManager.LoadScene(sceneToLoad);
+        yield return null;
     }
 
     public void StartLoading(string sceneToLoad)

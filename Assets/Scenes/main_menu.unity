@@ -1009,7 +1009,7 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  nama_scene: Prolog
+  nama_scene: Play
 --- !u!1 &1358826031
 GameObject:
   m_ObjectHideFlags: 0

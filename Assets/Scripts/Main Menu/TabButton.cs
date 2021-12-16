@@ -20,14 +20,26 @@ public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
         PlayerPrefs.SetInt("HP", 100);
         PlayerPrefs.SetInt("Skor", 0);
         PlayerPrefs.SetInt("TempSkor", 0);
-        PlayerPrefs.SetString("Level", nama_scene);
+        PlayerPrefs.SetString("Level", "Prolog");
+        SceneManager.LoadScene("Prolog");
+    }
+
+    private void Continue()
+    {
+        PlayerPrefs.SetInt("TempSkor", 0);
+        SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
             tabGroup.OnTabSelected(this);
-            NewGame();
-            SceneManager.LoadScene(nama_scene);
+
+            if (nama_scene == "Play")
+            {
+                if (PlayerPrefs.GetString("Level", "Prolog") != "Prolog") Continue();
+                else NewGame();
+            }
+            else SceneManager.LoadScene(nama_scene);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
