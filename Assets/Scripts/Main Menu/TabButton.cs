@@ -15,9 +15,18 @@ public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     public UnityEvent onTabDeselected;
     public string nama_scene;
 
+    private void NewGame()
+    {
+        PlayerPrefs.SetInt("HP", 100);
+        PlayerPrefs.SetInt("Skor", 0);
+        PlayerPrefs.SetInt("TempSkor", 0);
+        PlayerPrefs.SetString("Level", nama_scene);
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
             tabGroup.OnTabSelected(this);
+            NewGame();
             SceneManager.LoadScene(nama_scene);
     }
 
