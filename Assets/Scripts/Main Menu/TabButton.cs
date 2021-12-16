@@ -34,10 +34,13 @@ public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     {
             tabGroup.OnTabSelected(this);
 
-            if (nama_scene == "Play")
+            if (nama_scene == "NewGame")
             {
-                if (PlayerPrefs.GetString("Level", "Prolog") != "Prolog") Continue();
-                else NewGame();
+                NewGame();
+            }
+            else if (nama_scene == "Continue")
+            {
+                Continue();
             }
             else SceneManager.LoadScene(nama_scene);
     }
