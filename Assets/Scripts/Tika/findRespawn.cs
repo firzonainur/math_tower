@@ -14,6 +14,7 @@ public class findRespawn : MonoBehaviour
         foreach(GameObject g in GameObject.FindGameObjectsWithTag("Respawn"))
         {
             float dist = Vector3.Distance(this.gameObject.transform.position, g.transform.position);
+            
             if (dist < oldDistance)
             {
                 closest = g;
@@ -27,6 +28,7 @@ public class findRespawn : MonoBehaviour
             yield return new WaitForSeconds(1f);
             Vector3 current = this.gameObject.transform.position;
             this.gameObject.transform.position = new Vector3(closest.transform.position.x, closest.transform.position.y, current.z);
+            oldDistance = 9999;
         }
 
         findClosest = false;
@@ -40,6 +42,15 @@ public class findRespawn : MonoBehaviour
     void Update()
     {
         if (this.gameObject.transform.position.y <= minimumY && !findClosest)
+        {
+            findClosest = true;
+            StartCoroutine(find());
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "lavaOrWater")
         {
             findClosest = true;
             StartCoroutine(find());

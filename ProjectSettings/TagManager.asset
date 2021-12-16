@@ -8,6 +8,7 @@ TagManager:
   - EndingPos
   - LoadingScreen
   - WallBackward
+  - lavaOrWater
   layers:
   - Default
   - TransparentFX

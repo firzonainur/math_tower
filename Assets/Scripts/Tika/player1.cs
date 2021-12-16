@@ -101,18 +101,21 @@ public class player1 : MonoBehaviour
         dialogObject.SetActive(true);
     }
 
-    void Awake()
+    private void Awake()
     {
         m_animator = gameObject.GetComponent<Animator>();
         rigid = gameObject.GetComponent<Rigidbody>();
         rigid.freezeRotation = true;
         capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
-
+    }
+    
+    private void Start()
+    {
         PlayerPrefs.SetInt("TempSkor", 0);
         PlayerPrefs.SetInt("nilai", 0);
     }
 
-    void Update()
+    private void Update()
     {
         MoveHorizontal();
         SetPlayerAnimation();
@@ -144,7 +147,7 @@ public class player1 : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (OnGround()) jump = false;
         else jump = true;

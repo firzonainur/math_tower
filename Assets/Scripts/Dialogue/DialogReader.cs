@@ -120,6 +120,14 @@ public class DialogReader : MonoBehaviour
 
     private void GoToNextScene()
     {
+        PlayerPrefs.SetInt("Nama_Skor", PlayerPrefs.GetInt("Nama_Skor") + PlayerPrefs.GetInt("TempSkor"));
+        PlayerPrefs.SetString("Nama_Level", nextScene);
+
+        PlayerPrefs.SetInt("TempSkor", 0);
+
+        Debug.Log("Skor terbaru: " + PlayerPrefs.GetInt("Nama_Skor"));
+        Debug.Log("Level selanjutnya: " + PlayerPrefs.GetString("Nama_Level"));
+
         GameObject loadingScreen = GameObject.FindGameObjectWithTag("LoadingScreen").gameObject;
         loadingScreen.GetComponent<loading>().StartLoading(nextScene);
     }
@@ -152,7 +160,14 @@ public class DialogReader : MonoBehaviour
             rect.sizeDelta = Vector2.zero;
             backSound.Stop();
 
-            if (goToNextSceneAfterEnds && !hideDialogueAfterEnds) GoToNextScene();
+            if (goToNextSceneAfterEnds && !hideDialogueAfterEnds)
+            {
+                if (player != null)
+                {
+                    player.GetComponent<player1>().paused = true;
+                }
+                GoToNextScene();
+            }
             else if (hideDialogueAfterEnds && !goToNextSceneAfterEnds)
             {
                 kotakDialog.transform.parent.gameObject.SetActive(false);

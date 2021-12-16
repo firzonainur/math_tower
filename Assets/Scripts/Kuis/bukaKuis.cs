@@ -11,14 +11,28 @@ public class bukaKuis : MonoBehaviour
     private GameObject kuisInstantiate;
     public float rockDestinationY = -16.5f;
     public float removeSpeed = 0f;
-    private bool canOpenQuiz = false;
+    public bool canOpenQuiz = false;
 
     private IEnumerator removeRockObject(float removeSpeed)
     {
-        while (puzzleRock.transform.position.y > rockDestinationY)
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        canOpenQuiz = false;
+
+        if (puzzleRock.transform.position.y > rockDestinationY)
         {
-            puzzleRock.transform.position += Vector3.down * removeSpeed;
-            yield return null;
+            while (puzzleRock.transform.position.y > rockDestinationY)
+            {
+                puzzleRock.transform.position += Vector3.down * removeSpeed;
+                yield return null;
+            }
+        }
+        else if (puzzleRock.transform.position.y < rockDestinationY)
+        {
+            while (puzzleRock.transform.position.y < rockDestinationY)
+            {
+                puzzleRock.transform.position += Vector3.up * removeSpeed;
+                yield return null;
+            }
         }
 
         Destroy(gameObject);
