@@ -3659,6 +3659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 8859743237197078255, guid: ceef262b35f380947977442f4e8ea561, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: d8d57485428a5678e84bc2d13fc4ae7b, type: 2}
     - target: {fileID: 8859743237491104329, guid: ceef262b35f380947977442f4e8ea561, type: 3}
       propertyPath: m_Material
       value: 
