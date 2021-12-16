@@ -12,13 +12,14 @@ public class findRespawn : MonoBehaviour
 
     IEnumerator find()
     {
-        PlayerPrefs.SetInt("Nama_HP", PlayerPrefs.GetInt("Nama_HP") - 30);
-        Debug.Log("HP: " + PlayerPrefs.GetInt("Nama_HP"));
+        PlayerPrefs.SetInt("HP", PlayerPrefs.GetInt("HP") - 25);
+        Debug.Log("HP: " + PlayerPrefs.GetInt("HP"));
 
-        if (PlayerPrefs.GetInt("Nama_HP") < 0)
+        if (PlayerPrefs.GetInt("HP") <= 0)
         {
             Debug.Log("Game over");
             PlayerPrefs.SetString("Nama_Level", "Level_1");
+            if (PlayerPrefs.GetInt("HighScore", 0) < PlayerPrefs.GetInt("Skor")) PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("Skor"));
             SceneManager.LoadScene("main_menu");
         }
 

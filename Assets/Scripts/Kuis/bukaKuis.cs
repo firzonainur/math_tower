@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -87,6 +86,8 @@ public class bukaKuis : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             canOpenQuiz = true;
+            GameObject hintUI = GameObject.Find("hint").gameObject;
+            hintUI.GetComponent<Text>().enabled = true;
         }
     }
 
@@ -94,6 +95,8 @@ public class bukaKuis : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             canOpenQuiz = false;
+            GameObject hintUI = GameObject.Find("hint").gameObject;
+            hintUI.GetComponent<Text>().enabled = false;
         }
     }
 }

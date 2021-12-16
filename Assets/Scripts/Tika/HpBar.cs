@@ -8,7 +8,7 @@ public class HpBar : MonoBehaviour
 
     void Update()
     {
-        var currentHP = PlayerPrefs.GetInt("Nama_HP");
+        var currentHP = PlayerPrefs.GetInt("HP");
         this.gameObject.transform.localScale = new Vector3(currentHP / 100f, 1, 1);
     }
 }

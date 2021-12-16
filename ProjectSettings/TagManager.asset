@@ -9,6 +9,7 @@ TagManager:
   - LoadingScreen
   - WallBackward
   - lavaOrWater
+  - hintUI
   layers:
   - Default
   - TransparentFX
