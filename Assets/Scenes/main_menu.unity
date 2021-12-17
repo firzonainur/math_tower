@@ -2098,7 +2098,7 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  nama_scene: Exit
+  nama_scene: Quit
 --- !u!114 &1865512267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,7 +2119,7 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  nama_scene: 
+  nama_scene: Quit
 --- !u!1001 &1943264071
 PrefabInstance:
   m_ObjectHideFlags: 0
