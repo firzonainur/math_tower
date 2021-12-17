@@ -28,6 +28,7 @@ public class TabGroup : MonoBehaviour
         if(selectedTab == null || button != selectedTab)
         {
             button.background.sprite = tabHover;
+            hover.volume = PlayerPrefs.GetFloat("Volume");
             hover.Play();
         }
         

@@ -2197,8 +2197,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97303334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 275.84, y: 13.67, z: 16.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 303.23, y: 1.36, z: 16.8}
+  m_LocalScale: {x: 1, y: 4.29, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -8065,7 +8065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308624144353420794, guid: 4e65d1433cd3acf619d7f8c49d1ccc5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.01
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4308624144353420794, guid: 4e65d1433cd3acf619d7f8c49d1ccc5a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8236,7 +8236,7 @@ MonoBehaviour:
   onQuestPosition: 0
   openingDialog: {fileID: 1804187113}
   endingDialog: {fileID: 454130241}
-  questDialog: {fileID: 0}
+  questDialog: {fileID: 844020954}
   angleInRadians: 0
 --- !u!136 &477389733
 CapsuleCollider:
@@ -13822,7 +13822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728971904}
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 300, y: 1.3, z: 20.9}
+  m_LocalPosition: {x: 323.34, y: 1.3, z: 20.9}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_Children:
   - {fileID: 1777073607}
@@ -15763,7 +15763,7 @@ MonoBehaviour:
   characterName: {fileID: 2052291669}
   expressions: {fileID: 1576573418}
   message: {fileID: 1678443582}
-  story: {fileID: 11400000, guid: e99841c0bac19240297b194e32abe5e9, type: 2}
+  story: {fileID: 11400000, guid: 801c794d90d0376a4821513bcd0a59b6, type: 2}
   expressionSprites:
   - {fileID: 21300000, guid: 28dd13502010604688d0b239503e4f00, type: 3}
   - {fileID: 21300000, guid: 453f2ab833df8ffd988e07419cdcb33b, type: 3}
@@ -18833,7 +18833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79c6919b83b273c3eaa7ea3837befd3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 289.65
+      value: 314.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79c6919b83b273c3eaa7ea3837befd3a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26397,8 +26397,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388561138}
-  m_LocalRotation: {x: 0.1593221, y: 1e-45, z: -0, w: 0.98722667}
-  m_LocalPosition: {x: 5.01, y: 7.7799997, z: -3.290001}
+  m_LocalRotation: {x: 0.15215878, y: 1e-45, z: -0, w: 0.98835605}
+  m_LocalPosition: {x: 5, y: 7.7799997, z: -4.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1996357649}
@@ -36154,8 +36154,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898557969}
-  m_LocalRotation: {x: 0.1593221, y: 1e-45, z: 0, w: 0.98722667}
-  m_LocalPosition: {x: 5.01, y: 7.7799997, z: -3.290001}
+  m_LocalRotation: {x: 0.15215878, y: 1e-45, z: 0, w: 0.98835605}
+  m_LocalPosition: {x: 5, y: 7.7799997, z: -4.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37399,7 +37399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 6.85, z: -20.67}
+  m_FollowOffset: {x: 0, y: 6.85, z: -21.72}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1

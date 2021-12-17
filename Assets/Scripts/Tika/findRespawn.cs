@@ -23,7 +23,7 @@ public class findRespawn : MonoBehaviour
         if (tempHP <= 0)
         {
             Debug.Log("Game over");
-            PlayerPrefs.SetString("Nama_Level", "Level_1");
+            PlayerPrefs.SetString("Level", "Level_1");
             if (PlayerPrefs.GetInt("HighScore", 0) < PlayerPrefs.GetInt("Skor")) PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("Skor"));
             SceneManager.LoadScene("main_menu");
         }

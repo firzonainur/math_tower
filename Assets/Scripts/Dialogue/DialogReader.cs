@@ -144,8 +144,8 @@ public class DialogReader : MonoBehaviour
         Time.timeScale = 1;
         maxIndex = story.messages.Length;
         
-        backSound.volume = PlayerPrefs.GetInt("Volume");
-        soundEffect.volume = PlayerPrefs.GetInt("Volume");
+        backSound.volume = PlayerPrefs.GetFloat("Volume");
+        soundEffect.volume = PlayerPrefs.GetFloat("Volume");
 
         backSound.clip = story.backsound;
         backSound.Play();

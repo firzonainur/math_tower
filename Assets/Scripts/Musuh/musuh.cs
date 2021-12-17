@@ -38,6 +38,7 @@ public class musuh : MonoBehaviour
 
         isAttacking = true;
         ChangeAnimationState("Attack", attackSpeed);
+        GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Volume");
         GetComponent<AudioSource>().Play();
         
         if (transform.position.x < target.transform.position.x) transform.eulerAngles = new Vector3(0, 90, 0);

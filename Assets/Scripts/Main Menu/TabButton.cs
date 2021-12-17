@@ -48,6 +48,10 @@ public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
             {
                 Continue();
             }
+            else if (nama_scene == "Quit")
+            {
+                Application.Quit();
+            }
             else SceneManager.LoadScene(nama_scene);
     }
 
@@ -66,6 +70,9 @@ public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     {
         background = GetComponent<Image>();
         tabGroup.Subscribe(this);
+        var parent = transform.parent;
+        if (parent.transform.parent.gameObject.GetComponent<AudioSource>() != null)
+            parent.transform.parent.gameObject.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Volume");
     }
 
     // Update is called once per frame
