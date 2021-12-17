@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194551830a745d81488ffc4d3cdcb841, type: 3}
+  m_Name: Scene1_Ending
+  m_EditorClassIdentifier: 
+  backsound: {fileID: 0}
+  messages:
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Kenapa aku harus mengerjakan soal matematika di tempat seperti ini.
+    expressions: sad
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Apa yang sebenarnya terjadi
+    expressions: sad
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: 'Setidaknya tantangan itu adalah soal matematika '
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: 'Berkat itu aku bisa sampai disini '
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: Buku ini....
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: "tiba-tiba buku itu bercahaya\u2026.."
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\u201CMath tower\u201D"
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\u201C Belenggu telah terputus \""
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Sebuah pintu mulai terbuka "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Sebuah pintu mulai terbuka "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Gambaran baru  mulai mengalir "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Sang angka akan memulai "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Wujudkan dunia dalam hati "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 
+    expressions: 

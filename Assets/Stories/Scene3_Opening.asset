@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194551830a745d81488ffc4d3cdcb841, type: 3}
+  m_Name: Scene3_Opening
+  m_EditorClassIdentifier: 
+  backsound: {fileID: 0}
+  messages:
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: Dunia ini berubah lagi
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: apa yang terjadi ?
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: apa benar bentuk dunia ini terpengaruh oleh pikiranku
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: Hutan , sungai , semua menghilang , berubah menjadi bebatuan
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: aku mulai lelah dengan semua ini
+    expressions: sad
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: "Mungkin maksud kata \u201CUbahlah Pandanganmu , Maka dunia akan berubah\u201D
+      pikiranku dapat mempengaruhi susunan dunia ini"
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: Sepertinya aku harus mengubah kembali pandanganku terhadap matematika.
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: 'mungkin dengan begitu akan mempengaruhi dunia ini dan aku dapat menemukan
+      jalan keluar. '
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 
+    expressions: 

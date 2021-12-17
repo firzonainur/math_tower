@@ -121,6 +121,7 @@ public class DialogReader : MonoBehaviour
     private void GoToNextScene()
     {
         PlayerPrefs.SetInt("Skor", PlayerPrefs.GetInt("Skor") + PlayerPrefs.GetInt("TempSkor"));
+
         PlayerPrefs.SetString("Level", nextScene);
 
         PlayerPrefs.SetInt("TempSkor", 0);
@@ -129,13 +130,23 @@ public class DialogReader : MonoBehaviour
         Debug.Log("Level selanjutnya: " + PlayerPrefs.GetString("Level"));
 
         GameObject loadingScreen = GameObject.FindGameObjectWithTag("LoadingScreen").gameObject;
-        loadingScreen.GetComponent<loading>().StartLoading(nextScene);
+
+        if (nextScene == "Win")
+        {
+            if (PlayerPrefs.GetInt("HighScore", 0) < PlayerPrefs.GetInt("Skor")) PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("Skor"));
+            loadingScreen.GetComponent<loading>().StartLoading("main_menu");
+        }
+        else loadingScreen.GetComponent<loading>().StartLoading(nextScene);
     }
 
     void Awake()
     {
         Time.timeScale = 1;
         maxIndex = story.messages.Length;
+        
+        backSound.volume = PlayerPrefs.GetInt("Volume");
+        soundEffect.volume = PlayerPrefs.GetInt("Volume");
+
         backSound.clip = story.backsound;
         backSound.Play();
         readMessage(currentIndex);
@@ -162,19 +173,28 @@ public class DialogReader : MonoBehaviour
 
             if (goToNextSceneAfterEnds && !hideDialogueAfterEnds)
             {
+                kotakDialog.transform.parent.gameObject.SetActive(false);
                 if (player != null)
                 {
-                    player.GetComponent<player1>().paused = true;
+                    var player1Script = player.GetComponent<player1>();
+                    var findRespawnScript = player.GetComponent<findRespawn>();
+                    var reducedHP = 0;
+
+                    if (player1Script != null) reducedHP += player1Script.reduceHP;
+                    if (findRespawnScript != null) reducedHP += findRespawnScript.reduceHP;
+
+                    var updatedHP = PlayerPrefs.GetInt("HP") + reducedHP;
+                    PlayerPrefs.SetInt("HP", updatedHP);
+                    
+                    player1Script.paused = false;
                 }
                 GoToNextScene();
             }
             else if (hideDialogueAfterEnds && !goToNextSceneAfterEnds)
             {
                 kotakDialog.transform.parent.gameObject.SetActive(false);
-                if (player != null)
-                {
-                    player.GetComponent<player1>().paused = false;
-                }
+                var player1Script = player.GetComponent<player1>();
+                player1Script.paused = false;
             }
         }
     }

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194551830a745d81488ffc4d3cdcb841, type: 3}
+  m_Name: Scene3_Ending
+  m_EditorClassIdentifier: 
+  backsound: {fileID: 0}
+  messages:
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Akhirnya aku sampai sini
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: setidaknya berkat matematika
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: 'aku berhasil melewati semua tantantangan itu '
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: "Huhhh\u2026 kenapa ya rasanya begitu miris"
+    expressions: sad
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: ketika hal yang dulu begitu ku benci
+    expressions: sad
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: sekarang malah membantuku
+    expressions: sad
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 'Buku itu kembali bercahaya '
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\u201C Math Tower\u201D "
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\u201C Mereka yang telah memahami, akan di tuntun oleh cahaya hati
+      \u201C"
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: " \u201C Ubahlah pandanganmu, maka dunia akan berubah\u201D"
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 
+    expressions: 

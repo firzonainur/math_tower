@@ -15,6 +15,7 @@ public class bukaKuis : MonoBehaviour
     private IEnumerator removeRockObject(float removeSpeed)
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
+
         canOpenQuiz = false;
 
         if (puzzleRock.transform.position.y > rockDestinationY)
@@ -59,8 +60,17 @@ public class bukaKuis : MonoBehaviour
         // Debug.Log("Nilai di PlayerPrefs: " + PlayerPrefs.GetInt(idNilai));
         // Debug.Log("Nilai: " + nilai);
 
-        if (nilai < 60) Debug.Log("Tidak lulus");
-        else StartCoroutine(removeRockObject(removeSpeed));
+        if (nilai < 60)
+        {
+            Debug.Log("Tidak lulus");
+            PlayerPrefs.SetInt(idTempSkor, tambahSkor - nilai);
+        }
+        else
+        {
+            GameObject hintUI = GameObject.Find("hint").gameObject;
+            hintUI.GetComponent<Text>().enabled = false;
+            StartCoroutine(removeRockObject(removeSpeed));
+        }
     }
 
     void Start()

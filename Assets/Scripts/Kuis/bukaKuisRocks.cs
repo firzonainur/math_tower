@@ -63,7 +63,11 @@ public class bukaKuisRocks : MonoBehaviour
         int nilai = PlayerPrefs.GetInt(idNilai);
         int tambahSkor = PlayerPrefs.GetInt(idTempSkor) + nilai;
 
-        if (nilai < 60) Debug.Log("Tidak lulus");
+        if (nilai < 60)
+        {
+            Debug.Log("Tidak lulus");
+            PlayerPrefs.SetInt(idTempSkor, tambahSkor - nilai);
+        }
         else
         {
             PlayerPrefs.SetInt(idTempSkor, tambahSkor);
@@ -95,13 +99,16 @@ public class bukaKuisRocks : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             canOpenQuiz = true;
+            GameObject hintUI = GameObject.Find("hint").gameObject;
+            hintUI.GetComponent<Text>().enabled = true;
         }
     }
-
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "Player")
         {
             canOpenQuiz = false;
+            GameObject hintUI = GameObject.Find("hint").gameObject;
+            hintUI.GetComponent<Text>().enabled = false;
         }
     }
 }

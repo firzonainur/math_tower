@@ -10,6 +10,8 @@ TagManager:
   - WallBackward
   - lavaOrWater
   - hintUI
+  - Enemy
+  - QuestPos
   layers:
   - Default
   - TransparentFX

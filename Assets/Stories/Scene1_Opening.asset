@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194551830a745d81488ffc4d3cdcb841, type: 3}
+  m_Name: Scene1_Opening
+  m_EditorClassIdentifier: 
+  backsound: {fileID: 0}
+  messages:
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: Dimana ini ?
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: tempat apa ini ?
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: apa yang sebenarnya terjadi ?
+    expressions: Thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: bukanya aku baru saja dalam perjalanan sekolah
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: 'lalu dimana anak kecil tadi. '
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: "Buku ini \u2026.."
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 'tiba-tiba buku itu bercahaya dan sesuatu muncul didalamnya '
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\u201C Math Tower\u2026..\u201D"
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\u201C Mereka yang terkekang dan tak pernah maju \""
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Menganggap akan batasan bagai penghalang "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Menganggap akan batasan bagai penghalang "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: '" Sang angka akan memulai "'
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\" Wujudkan dunia dalam  hati \u201C"
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Book
+    message: "\u201C Hadapilah\u2026. dan ubahlah pandanganmu, maka dunia akan berubah\u2026\u2026\u201D"
+    expressions: reading
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 'Tulisan itu menghilang '
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Apa maksud dari buku tadi
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Aku sama sekali tidak paham
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Mungkin untuk sekarang aku akan mencari jalan untuk kembali
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 
+    expressions: 

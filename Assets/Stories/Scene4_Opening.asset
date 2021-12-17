@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194551830a745d81488ffc4d3cdcb841, type: 3}
+  m_Name: Scene4_Opening
+  m_EditorClassIdentifier: 
+  backsound: {fileID: 0}
+  messages:
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 'Tiba-tiba muncul batu bercahaya, dan jalan yang dilalui tika mulai
+      bersinar. '
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Dari mana batu-batu itu muncul
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: batu itu begitu indah dan terasa menenangkan
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: jalan ini juga terlihat begitu indah
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: 'apakah ini yang dimaksud buku ini ?  '
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Mungkin dibalik jalan ini
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: aku bisa kembali ke duniaku
+    expressions: thinking
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 
+    expressions: 

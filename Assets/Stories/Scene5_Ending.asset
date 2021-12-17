@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194551830a745d81488ffc4d3cdcb841, type: 3}
+  m_Name: Scene5_Ending
+  m_EditorClassIdentifier: 
+  backsound: {fileID: 0}
+  messages:
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: "Akhirnya aku berhasil mengalahkanya\u2026"
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 'Tika '
+    message: "apa sebenarnya mahluk itu\u2026.. "
+    expressions: neutral
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Unknown
+    message: Apa yang dimulai telah selesai
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Unknown
+    message: apa yang diinginkan telah diberikan
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Unknown
+    message: apa yang diharapkan telah didapatkan
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Unknown
+    message: "Akhir telah mengetuk pintu \u2026"
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Apa maksudmu ?
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: 'Aku tidak mengerti '
+    expressions: surprised
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: 'Heiii... '
+    expressions: angry
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: jawab aku...
+    expressions: angry
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: 'apa yang kau maksut ? '
+    expressions: angry
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: Cepat...
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: jawab....
+    expressions: 
+  - background: 2
+    soundEffect: {fileID: 0}
+    characterName: Tika
+    message: aku......
+    expressions: 
+  - background: 0
+    soundEffect: {fileID: 0}
+    characterName: 
+    message: 
+    expressions: 

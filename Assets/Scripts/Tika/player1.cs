@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player1 : MonoBehaviour
 {
@@ -8,6 +11,7 @@ public class player1 : MonoBehaviour
     private CapsuleCollider capsuleCollider;
 
     private float horizontalMove = 0f;
+    private bool getAttacked = false;
 
     public bool jump = false;
     public bool onSlope = false;
@@ -16,14 +20,18 @@ public class player1 : MonoBehaviour
     public float jumpAmount = 10f;
     public float animationSpeed = 1;
     public float jumpAnimationSpeed = 1.5f;
+    public int reduceHP = 0;
 
     public bool paused = false;
     public bool onQuiz = false;
     public bool readOpening = false;
     public bool readEnding = false;
+    public bool readQuest = false;
     public bool onEndingPosition = false;
+    public bool onQuestPosition = false;
     public GameObject openingDialog;
     public GameObject endingDialog;
+    public GameObject questDialog;
     public float angleInRadians;
 
     private void ChangeAnimationState(string animation, float speed)
@@ -55,7 +63,14 @@ public class player1 : MonoBehaviour
 
     private void MoveHorizontal()
     {
-        if (paused || onQuiz) return;
+        if (paused || onQuiz)
+        {
+            horizontalMove = 0;
+            var vel = GetComponent<Rigidbody>().velocity;
+            vel.x = 0;
+            GetComponent<Rigidbody>().velocity = vel;
+            return;
+        }
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
         
@@ -98,7 +113,30 @@ public class player1 : MonoBehaviour
     private void OpenDialogue(GameObject dialogObject)
     {
         paused = true;
+        jump = false;
+        ChangeAnimationState("Idle", animationSpeed);
         dialogObject.SetActive(true);
+    }
+
+    private IEnumerator Attacked()
+    {
+        yield return new WaitForSeconds(1f);
+        getAttacked = false;
+
+        reduceHP -= 25;
+        var currentHP = PlayerPrefs.GetInt("HP");
+        var tempHP = currentHP + reduceHP;
+        PlayerPrefs.SetInt("tempHP", tempHP);
+
+        Debug.Log("HP: " + tempHP);
+
+        if (tempHP <= 0)
+        {
+            Debug.Log("Game over");
+            PlayerPrefs.SetString("Nama_Level", "Level_1");
+            if (PlayerPrefs.GetInt("HighScore", 0) < PlayerPrefs.GetInt("Skor")) PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("Skor"));
+            SceneManager.LoadScene("main_menu");
+        }
     }
 
     private void Awake()
@@ -143,7 +181,20 @@ public class player1 : MonoBehaviour
         if (onEndingPosition && !readEnding)
         {
             OpenDialogue(endingDialog);
-            readEnding = false;
+            readEnding = true;
+        }
+
+        if (onQuestPosition && !readQuest)
+        {
+            ChangeAnimationState("Idle", animationSpeed);
+            if (questDialog != null) OpenDialogue(questDialog);
+            readQuest = true;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level_5" && !readEnding && GameObject.FindGameObjectsWithTag("Enemy").Count() == 0)
+        {
+            OpenDialogue(endingDialog);
+            readEnding = true;
         }
     }
 
@@ -157,6 +208,16 @@ public class player1 : MonoBehaviour
         if (other.gameObject.tag == "EndingPos")
         {
             onEndingPosition = true;
+        }
+        else if (other.gameObject.tag == "QuestPos")
+        {
+            onQuestPosition = true;
+        }
+        else if (other.gameObject.tag == "Enemy" && !getAttacked)
+        {
+            getAttacked = true;
+            Debug.Log("Enemy Attacked");
+            StartCoroutine(Attacked());
         }
     }
 

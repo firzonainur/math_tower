@@ -26,6 +26,12 @@ public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
 
     private void Continue()
     {
+        if (PlayerPrefs.GetString("Level") == "Win" || PlayerPrefs.GetString("Level") == "")
+        {
+            NewGame();
+            return;
+        }
+
         PlayerPrefs.SetInt("TempSkor", 0);
         SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
     }

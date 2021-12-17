@@ -6,7 +6,6 @@ public class loading : MonoBehaviour
 {
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public IEnumerator LoadingScene(string sceneToLoad)

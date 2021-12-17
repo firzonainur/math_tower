@@ -7,15 +7,20 @@ public class findRespawn : MonoBehaviour
     private GameObject closest;
     private float oldDistance = 9999;
     private bool findClosest = false;
+    public int reduceHP = 0;
 
     public float minimumY;
 
     IEnumerator find()
     {
-        PlayerPrefs.SetInt("HP", PlayerPrefs.GetInt("HP") - 25);
-        Debug.Log("HP: " + PlayerPrefs.GetInt("HP"));
+        reduceHP -= 10;
+        var currentHP = PlayerPrefs.GetInt("HP");
+        var tempHP = currentHP + reduceHP;
+        PlayerPrefs.SetInt("tempHP", tempHP);
 
-        if (PlayerPrefs.GetInt("HP") <= 0)
+        Debug.Log("HP: " + tempHP);
+
+        if (tempHP <= 0)
         {
             Debug.Log("Game over");
             PlayerPrefs.SetString("Nama_Level", "Level_1");
